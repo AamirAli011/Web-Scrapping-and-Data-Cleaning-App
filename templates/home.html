@@ -1,0 +1,399 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Ecology Theme">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraper</title>
+    <link rel="shortcut icon" href="{% static 'images/Spider-icon.ICO' %}" type="image/x-icon">
+    <!-- Goole Font -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/bootstrap.min.css' %}">
+    <!-- Font awsome CSS -->
+    <link rel="stylesheet" href="{% static 'css/assets/font-awesome.min.css' %}">    
+    <link rel="stylesheet" href="{% static 'css/assets/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/assets/magnific-popup.css' %}">    
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="{% static 'css/assets/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/assets/owl.theme.css' %}">     
+    <link rel="stylesheet" href="{% static 'css/assets/animate.css' %}"> 
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="{% static 'css/assets/slick.css' %}">  
+
+    <!-- Revolution Slider -->
+    <link rel="stylesheet" href="{% static 'css/assets/revolution/layers.css' %}">
+    <link rel="stylesheet" href="{% static 'css/assets/revolution/navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/assets/revolution/settings.css' %}">    
+    <!-- Mean Menu-->
+    <link rel="stylesheet" href="{% static 'css/assets/meanmenu.css' %}">
+    <!-- main style-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/demo.css' %}">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<header class="header_tow">
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+<!-- NAV BAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        
+            <li class="btn btn-outline-success">
+            <span class="hello-msg">Scrapper</span>
+        
+            </li>
+       
+
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Scrape">Scrape Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cleaningform">Data Cleaning</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sentimentform">Sentiment Analysis</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About us</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact us</a>
+          </li>
+        </ul>
+            
+            <li class="btn btn-outline-success">
+            <a  href="{% url 'logout' %}">
+                <span class="hello-msg">Log Out</span></a>
+            </li>
+        
+      </div>
+      
+    </div>
+  </nav>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
+
+</div> 
+
+
+    <!--==================
+        Slider
+    ===================-->
+    <div class="rev_slider_wrapper">
+        <div id="rev_slider_2" class="rev_slider" style="display:none">
+            <!-- BEGIN SLIDES LIST -->
+            <ul>
+                <li data-index="rs-1706" data-transition="fade" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+
+                <div class="slider-overlay"></div>
+                <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
+                <img src="{% static '/Pics/courses.png' %}" alt="Sky" class="rev-slidebg"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption font-lora sfb tp-resizeme letter-space-5 h-p" 
+                        data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                        data-y="['middle','middle','middle','middle']" data-voffset="['-300','-280','-250','-200']" 
+                        data-fontsize="['60','40','30','18']"
+                        data-lineheight="['70','80','70','70']"
+                        data-width="none"
+                        data-height="none"
+                        data-whitespace="nowrap"
+                        data-type="text" 
+                        data-responsive_offset="on" 
+                        data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":400,"to":"o:1;","delay":100,"split":"chars","splitdelay":0.05,"ease":"Power3.easeInOut"},{"delay":"wait","speed":100,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+
+                        style="z-index: 7; color:#fff; font-family:'Rubik', sans-serif; max-width: auto; max-height: auto; white-space: nowrap; font-weight:500; color:black;">Scrape Data On
+                    </div>
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption NotGeneric-Title   tp-resizeme" 
+                         id="slide-3045-layer-1" 
+                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                         data-y="['middle','middle','middle','middle']" data-voffset="['-150','-140','-120','-120']"
+                        data-fontsize="['170','120','80','40']"
+                        data-lineheight="['200','120','70','70']"
+                        data-width="none"
+                        data-height="none"
+                        data-whitespace="nowrap"
+                        data-type="text" 
+                        data-responsive_offset="on" 
+                        data-frames='[{"from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                        data-paddingtop="[10,10,10,10]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[10,10,10,10]"
+                        data-paddingleft="[0,0,0,0]"
+
+                        style="z-index: 5; font-family:'Roboto', sans-serif; font-weight: 700; white-space: nowrap;text-transform:left; color:black;">Online
+                    </div>
+
+                    <!-- LAYER NR.3 -->
+                    <div class="tp-caption NotGeneric-Title   tp-resizeme" 
+                         id="slide-3045-layer-1" 
+                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                         data-y="['middle','middle','middle','middle']" data-voffset="['30','0','-10','-40']" 
+                        data-fontsize="['170','120','80','40']"
+                        data-lineheight="['200','120','70','70']"
+                        data-width="none"
+                        data-height="none"
+                        data-whitespace="nowrap"
+                        data-type="text" 
+                        data-responsive_offset="on" 
+                        data-frames='[{"from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                        data-textAlign="['left','left','left','left']"
+                        data-paddingtop="[10,10,10,10]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[10,10,10,10]"
+                        data-paddingleft="[0,0,0,0]"
+
+                        style="z-index: 5; font-family:'Roboto', sans-serif; font-weight: 700; white-space: nowrap;text-transform:left; color:black;">Courses
+                    </div>
+                    
+                </li>
+
+                <li data-index="rs-1708" data-transition="fade" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <div class="slider-overlay"></div>
+                    <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
+                    <img src="{% static '/Pics/Ebook.png' %}" alt="Sky" class="rev-slidebg"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                    <!-- BEGIN BASIC TEXT LAYER -->
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption font-lora sfb tp-resizeme letter-space-5 h-p" 
+                       data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                        data-y="['middle','middle','middle','middle']" data-voffset="['-300','-280','-250','-200']" 
+                        data-fontsize="['60','40','30','18']"
+                        data-lineheight="['70','80','70','70']"
+                        data-width="none"
+                        data-height="none"
+                        data-whitespace="nowrap"
+                        data-type="text" 
+                        data-responsive_offset="on" 
+                        data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":400,"to":"o:1;","delay":100,"split":"chars","splitdelay":0.05,"ease":"Power3.easeInOut"},{"delay":"wait","speed":100,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+
+                        style="z-index: 7; color:#fff; font-family:'Rubik', sans-serif; max-width: auto; max-height: auto; white-space: nowrap; font-weight:500; color:black;"> Scrape Data On
+                    </div>
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption NotGeneric-Title   tp-resizeme" 
+                         id="slide-3045-layer-11" 
+                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                         data-y="['middle','middle','middle','middle']" data-voffset="['-150','-140','-120','-120']"
+                        data-fontsize="['170','120','80','40']"
+                        data-lineheight="['200','120','70','70']"
+                        data-width="none"
+                        data-height="none"
+                        data-whitespace="nowrap"
+                        data-type="text" 
+                        data-responsive_offset="on" 
+                        data-frames='[{"from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                        data-paddingtop="[10,10,10,10]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[10,10,10,10]"
+                        data-paddingleft="[0,0,0,0]"
+
+                        style="z-index: 5; font-family:'Roboto', sans-serif; font-weight: 700; white-space: nowrap;text-transform:left ; color:black;">E-books and 
+                    </div>
+
+                    <!-- LAYER NR.3 -->
+                    <div class="tp-caption NotGeneric-Title   tp-resizeme" 
+                         id="slide-3045-layer-12" 
+                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                         data-y="['middle','middle','middle','middle']" data-voffset="['30','0','-10','-40']" 
+                        data-fontsize="['170','120','80','40']"
+                        data-lineheight="['200','120','70','70']"
+                        data-width="none"
+                        data-height="none"
+                        data-whitespace="nowrap"
+                        data-type="text" 
+                        data-responsive_offset="on" 
+                        data-frames='[{"from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                        data-textAlign="['left','left','left','left']"
+                        data-paddingtop="[10,10,10,10]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[10,10,10,10]"
+                        data-paddingleft="[0,0,0,0]"
+
+                        style="z-index: 5; font-family:'Roboto', sans-serif; font-weight: 700; white-space: nowrap;text-transform:left; color:black;">Products
+                    </div>
+                    
+                </li>
+               
+
+            </ul><!-- END SLIDES LIST -->
+
+        </div><!-- END SLIDER CONTAINER -->
+    </div><!-- END SLIDER CONTAINER WRAPPER -->
+</header><!--  End header section-->
+
+<style>
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #f0f7fa !important;
+    
+    }
+    .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
+    .alignment {
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 20px;
+    }
+    .heading_align{
+        text-indent: 40%
+    }
+    .padding{
+    padding-bottom: 10px;
+    align-content: center;
+    }
+</style>
+<section class="learn_shep">
+    <div class="container">            
+        <div class="row">
+            
+                <div class="title">
+                    <div  class='center'>
+                    <h2 style="z-index: 7; color:rgb(14, 12, 12); font-family:'Rubik', sans-serif; max-width: auto; max-height: auto; white-space: nowrap; font-weight:500; color:rgb(0, 0, 0) ; text-align: center;" >Web Scraping</h2></div>
+                    <div class= 'alignment'>
+                    <p style="color:rgb(22, 15, 15);">Web scraping, web harvesting, or web data extraction is data scraping used for extracting data from websites. The web scraping software may directly access the World Wide Web using the Hypertext Transfer Protocol or a web browser. While web scraping can be done manually by a software user, the term typically refers to automated processes implemented using a bot or web crawler. It is a form of copying in which specific data is gathered and copied from the web, typically into a central local database or spreadsheet, for later retrieval or analysis.
+
+                        Web scraping a web page involves fetching it and extracting from it. Fetching is the downloading of a page (which a browser does when a user views a page). Therefore, web crawling is a main component of web scraping, to fetch pages for later processing. Once fetched, then extraction can take place. The content of a page may be parsed, searched, reformatted, its data copied into a spreadsheet or loaded into a database. Web scrapers typically take something out of a page, to make use of it for another purpose somewhere else. An example would be to find and copy names and telephone numbers, or companies and their URLs, or e-mail addresses to a list (contact scraping).
+                        
+                        Web scraping is used for contact scraping, and as a component of applications used for web indexing, web mining and data mining, online price change monitoring and price comparison, product review scraping (to watch the competition), gathering real estate listings, weather data monitoring, website change detection, research, tracking online presence and reputation, web mashup, and web data integration.
+                        
+                        Web pages are built using text-based mark-up languages (HTML and XHTML), and frequently contain a wealth of useful data in text form. However, most web pages are designed for human end-users and not for ease of automated use. As a result, specialized tools and software have been developed to facilitate the scraping of web pages. </p>
+                        <img src="{% static '/Pics/scraping.jpeg' %}" style='width: 1000px;height: 500px;'class="padding">
+                        <h3 style="color:rgb(10, 9, 9);" >What is data scraping good for?</h3>
+                        <p style="color:rgb(0, 0, 0);" >
+                        Web data extraction – also widely known as data scraping – has a huge range of applications. A data scraping tool can help you automate the process of extracting information from other websites, quickly and accurately. It can also make sure the data you’ve extracted is neatly organized, making it easier to analyze and use for other projects.
+                        
+                        In the world of e-commerce, web data scraping is widely used for competitor price monitoring. It’s the only practical way for brands to check the pricing of their competitors’ products and services, allowing them to fine-tune their own price strategies and stay ahead of the game. It’s also used as a tool for manufacturers to ensure retailers are compliant with pricing guidelines for their products. Market research organizations and analysts depend on web data extraction to gauge consumer sentiment by keeping track of online product reviews, news articles, and feedback.
+                        
+                        There’s a vast array of applications for data extraction in the financial world. Data scraping tools are used to extract insight from news stories, using this information to guide investment strategies. Similarly, researchers and analysts depend on data extraction to assess the financial health of companies. Insurance and financial services companies can mine a rich seam of alternative data scraped from the web to design new products and policies for their customers.
+                        
+                        Applications for web data extraction don’t end there. Data scraping tools are widely used in news and reputation monitoring, journalism, SEO monitoring, competitor analysis, data-driven marketing and lead generation, risk management, real estate, academic research, and much more.</p>
+                          
+                    <h3 style="color:rgb(8, 7, 7);">Basics of Web Scraping</h3>
+                        <p style="color:rgb(3, 3, 3);">It’s extremely simple, in truth, and works by way of two parts: a web crawler and a web scraper. The web crawler is the horse, and the scraper is the chariot. The crawler leads the scraper, as if by hand, through the internet, where it extracts the data requested. Learn the difference between web crawling & web scraping and how they work.
+                        
+                        The crawler-
+                        A web crawler, which we generally call a “spider,” is an artificial intelligence that browses the internet to index and search for content by following links and exploring, like a person with too much time on their hands. In many projects, you first “crawl” the web or one specific website to discover URLs which then you pass on to your scraper.
+                        
+                        The scraper-
+                        A web scraper is a specialized tool designed to accurately and quickly extract data from a web page. Web scrapers vary widely in design and complexity, depending on the project. An important part of every scraper is the data locators (or selectors) that are used to find the data that you want to extract from the HTML file - usually, XPath, CSS selectors, regex, or a combination of them is applied.</p>
+                        <img src="{% static '/Pics/app.png' %}" style='width: 1000px; height: 500px;' class="padding">
+                    
+                    <h3 style="z-index: 7; font-family:'Rubik', sans-serif; max-width: auto; max-height: auto; white-space: nowrap; font-weight:500; color:rgb(10, 8, 8);">Cleaning up Data Scraped from the Web</h3>
+                    
+                    <p style="color:rgb(14, 8, 8);"> One advantage of scraping data from the web is that you can actually have a better dataset than the original. Because you need to take steps to understand the dataset’s inconsistencies, you can eliminate or at least minimise them. From another perspective, spending time cleaning up messy data can fill the large gaps that your processor will experience when waiting for it to be downloaded from its host. Data cleansing is the process of detecting and removing corrupted or inaccurate values from the specified data. Data cleaning will not just provide a clean dataset. It also brings data consistency to different sets of data that have merged from various data sources. The extracted data from multiple sources can consist of meaningless data. Dummy values, contradictory data, absence of data are considered as meaningless data. These unnecessary data must be removed from the dataset.</p>
+                    
+                    <img src="{% static '/Pics/cleaning.png' %}" class="padding" >
+
+                    <h2 class="center" style="z-index: 7; color:rgb(19, 17, 17); font-family:'Rubik', sans-serif; max-width: auto; max-height: auto; white-space: nowrap; font-weight:500; color:rgb(20, 19, 19);">Sentiment Analysis</h2>
+                    <h3 style="color:rgb(15, 12, 12); padding-top: 15px ;">What is sentiment analysis?</h3>
+                        <p style="color:rgb(7, 5, 5);">If we take your customer feedback as an example, sentiment analysis (a form of text analytics) measures the attitude of the customer towards the aspects of a service or product which they describe in text.
+                        This typically involves taking a piece of text, whether it’s a sentence, a comment or an entire document and returning a “score” that measures how positive or negative the text is.</p>
+                    <h3  style="color:rgb(7, 5, 5);">Why sentiment analysis is needed</h3>
+                    <p style="color:rgb(14, 10, 10);">In today’s environment where we’re suffering from data overload (although this does not mean better or deeper insights), companies might have mountains of customer feedback collected. Yet for mere humans, it’s still impossible to analyze it manually without any sort of error or bias.
+
+                        Oftentimes, companies with the best intentions find themselves in an insights vacuum. You know you need insights to inform your decision making. And you know that you’re lacking them. But you don’t know how best to get them.
+                        
+                        Sentiment analysis provides answers into what the most important issues are. Because sentiment analysis can be automated, decisions can be made based on a significant amount of data rather than plain intuition that isn’t always right. </p>
+                        <img src="{% static '/Pics/analysis.jpg' %}" class="padding">
+                    <h3 style="color:rgb(5, 4, 4);">Enhancing customer experience</h3>
+                    <p style="color:rgb(20, 15, 15);">Sentiment analysis can be used to focus on the customer feedback verbatims where the sentiment is strongly negative. Likewise, we can look at positive customer comments to find out why these customers love us. Only after these sentiment analysis have been conducted successfully, we can focus on increasing the number of our promoters.
+
+                        When used in combination with Thematic analysis, we can further narrow down this information to find precisely which themes are talked about with positive/negative sentiment. This provides actionable insights for your business.
+                        
+                        Evidently, sentiment analysis is being used by taking a source of text data that has a narrow scope of context and then gauging the polarity of the text.</p>
+
+                    
+                </div>
+                </div>
+            
+        </div>
+    </div>
+    
+</section>
+
+<section id="scroll-top" class="scroll-top">
+    <h2 class="disabled">Scroll to top</h2>
+    <div class="to-top pos-rtive">
+        <a href="#"><i class = "flaticon-right-arrow"></i></a>
+    </div>
+</section>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- Revolution Slider -->
+    <script src="{% static 'js/assets/revolution/jquery.themepunch.revolution.min.js' %}"></script>
+    <script src="{% static 'js/assets/revolution/jquery.themepunch.tools.min.js' %}"></script> 
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>     
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>   
+    <script src="{% static 'js/slick.min.js' %}"></script>   
+    <script src="{% static 'js/jquery.meanmenu.min.js' %}"></script>   
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <!-- Counter Script -->
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+
+    <!-- Revolution Extensions -->
+    <script src="{% static 'js/assets/revolution/extensions/revolution.extension.actions.min.js' %}"></script>
+    <script src="{% static 'js/assets/revolution/extensions/revolution.extension.carousel.min.js' %}"></script>
+    <script src="{% static 'js/assets/revolution/extensions/revolution.extension.kenburn.min.js' %}"></script>
+    <script src="{% static 'js/assets/revolution/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+    <script src="{% static 'js/assets/revolution/extensions/revolution.extension.migration.min.js' %}"></script>
+    <script src="{% static 'js/assets/revolution/extensions/revolution.extension.navigation.min.js' %}"></script>
+    <script src="{% static 'js/assets/revolution/extensions/revolution.extension.parallax.min.js' %}"></script>
+    <script src="{% static 'js/assets/revolution/extensions/revolution.extension.slideanims.min.js' %}"></script>
+    <script src="{% static 'js/assets/revolution/extensions/revolution.extension.video.min.js' %}"></script>
+    <script src="{% static 'js/assets/revolution/revolution.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>  
+    
+</body>
+</html>
